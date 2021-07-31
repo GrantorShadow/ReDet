@@ -7,11 +7,11 @@ from multiprocessing import Pool
 from DOTA2COCO import DOTA2COCOTest, DOTA2COCOTrain
 import argparse
 
-wordname_18 = ['plane', 'baseball-diamond', 'bridge', 'ground-track-field', 'small-vehicle', 'large-vehicle', 'ship',
-			   'tennis-court',
-			   'basketball-court', 'storage-tank', 'soccer-ball-field', 'roundabout', 'harbor', 'swimming-pool',
-			   'helicopter',
-			   'container-crane', 'airport', 'helipad']
+wordname_18 = [
+	'plane', 'baseball-diamond', 'bridge', 'ground-track-field', 'small-vehicle', 'large-vehicle', 'ship',
+	'tennis-court', 'basketball-court', 'storage-tank', 'soccer-ball-field', 'roundabout', 'harbor', 'swimming-pool',
+	'helicopter', 'container-crane', 'airport', 'helipad'
+]
 
 
 def parse_args():
