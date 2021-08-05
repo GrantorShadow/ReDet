@@ -115,32 +115,32 @@ def prepare(srcpath, dstpath):
 	split_val_ms.splitdata(0.5)
 	split_val_ms.splitdata(1.5)
 
-	split_test = SplitOnlyImage_multi_process.splitbase(os.path.join(srcpath, 'test', 'images'),
-														os.path.join(dstpath, 'test1024', 'images'),
-														gap=512,
-														subsize=1024,
-														num_process=16
-														)
-	split_test.splitdata(1)
+# 	split_test = SplitOnlyImage_multi_process.splitbase(os.path.join(srcpath, 'test', 'images'),
+# 														os.path.join(dstpath, 'test1024', 'images'),
+# 														gap=512,
+# 														subsize=1024,
+# 														num_process=16
+# 														)
+# 	split_test.splitdata(1)
 
-	split_test_ms = SplitOnlyImage_multi_process.splitbase(os.path.join(srcpath, 'test', 'images'),
-														   os.path.join(dstpath, 'test1024_ms', 'images'),
-														   gap=512,
-														   subsize=1024,
-														   num_process=16
-														   )
-	split_test_ms.splitdata(0.5)
-	split_test_ms.splitdata(1.5)
+# 	split_test_ms = SplitOnlyImage_multi_process.splitbase(os.path.join(srcpath, 'test', 'images'),
+# 														   os.path.join(dstpath, 'test1024_ms', 'images'),
+# 														   gap=512,
+# 														   subsize=1024,
+# 														   num_process=16
+# 														   )
+# 	split_test_ms.splitdata(0.5)
+# 	split_test_ms.splitdata(1.5)
 
 	DOTA2COCOTrain(os.path.join(dstpath, 'trainval1024'),
 				   os.path.join(dstpath, 'trainval1024', 'DOTA2_trainval1024.json'), wordname_18, difficult='2')
 	DOTA2COCOTrain(os.path.join(dstpath, 'trainval1024_ms'),
 				   os.path.join(dstpath, 'trainval1024_ms', 'DOTA2_trainval1024_ms.json'), wordname_18, difficult='2')
 
-	DOTA2COCOTest(os.path.join(dstpath, 'test1024'), os.path.join(dstpath, 'test1024', 'DOTA2_test1024.json'),
-				  wordname_18)
-	DOTA2COCOTest(os.path.join(dstpath, 'test1024_ms'), os.path.join(dstpath, 'test1024_ms', 'DOTA2_test1024_ms.json'),
-				  wordname_18)
+# 	DOTA2COCOTest(os.path.join(dstpath, 'test1024'), os.path.join(dstpath, 'test1024', 'DOTA2_test1024.json'),
+# 				  wordname_18)
+# 	DOTA2COCOTest(os.path.join(dstpath, 'test1024_ms'), os.path.join(dstpath, 'test1024_ms', 'DOTA2_test1024_ms.json'),
+# 				  wordname_18)
 
 
 if __name__ == '__main__':
